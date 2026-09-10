@@ -158,6 +158,20 @@
     color:#c9a17f;
   }
   .hero h1 em{color:#c9a17f;font-weight:420;}
+  .hero h1 .line{display:inline-block;}
+  @keyframes hero-fall{
+    from{opacity:0;transform:translateY(-26px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+  @media (prefers-reduced-motion: no-preference){
+    .hero-reveal{opacity:0;animation:hero-fall .9s cubic-bezier(.16,1,.3,1) forwards;}
+    .hero-inner .eyebrow.hero-reveal{animation-delay:.05s;}
+    .hero h1 .line.hero-reveal:first-child{animation-delay:.25s;}
+    .hero h1 .line.hero-reveal:last-child{animation-delay:.45s;}
+    .hero-inner .eyebrow.hero-reveal.eyebrow-2{animation-delay:.6s;}
+    .hero-sub.hero-reveal{animation-delay:.75s;}
+    .hero-bottom.hero-reveal{animation-delay:.9s;}
+  }
   .hero-sub{
     max-width:520px;margin-top:26px;
     font-size:1.05rem;color:#d8d2c2;
@@ -369,11 +383,11 @@
     <path d="M0,42 C120,78 230,8 380,32 C540,58 640,4 800,26 C960,48 1060,16 1200,38 L1200,100 L0,100 Z" style="fill:var(--bg)"></path>
   </svg>
   <div class="hero-inner">
-    <span class="eyebrow" style="color:#bcd8cf;">Um projeto fotográfico documental — Torres, RS</span>
-    <h1>"O que é nosso<br><em>merece ser visto."</em></h1>
-    <span class="eyebrow" style="color:#bcd8cf;margin-top:26px;">Imagem, sustentabilidade e valorização local</span>
-    <p class="hero-sub">Um projeto que usa a fotografia para revelar as histórias, as pessoas e os saberes por trás da produção local de Torres.</p>
-    <div class="hero-bottom">
+    <span class="eyebrow hero-reveal" style="color:#bcd8cf;">Um projeto fotográfico documental — Torres, RS</span>
+    <h1><span class="hero-reveal line">"O que é nosso</span><br><span class="hero-reveal line"><em>merece ser visto."</em></span></h1>
+    <span class="eyebrow hero-reveal eyebrow-2" style="color:#bcd8cf;margin-top:26px;">Imagem, sustentabilidade e valorização local</span>
+    <p class="hero-sub hero-reveal">Um projeto que usa a fotografia para revelar as histórias, as pessoas e os saberes por trás da produção local de Torres.</p>
+    <div class="hero-bottom hero-reveal">
       <a class="scrollcue" href="#projeto">Conheça o projeto</a>
       <span class="place">Torres · Rio Grande do Sul<br>Um projeto de Tina Fon Fotografia</span>
     </div>
