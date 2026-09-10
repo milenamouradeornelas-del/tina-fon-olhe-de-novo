@@ -293,12 +293,12 @@
   .pitch-photo{border-radius:2px;overflow:hidden;box-shadow:var(--shadow);}
   .pitch-photo img{aspect-ratio:3/4;object-fit:cover;}
   .pitch-work{margin-top:64px;padding-top:56px;border-top:1px solid var(--line);}
-  .credits{margin-top:30px;border-top:1px solid var(--line);max-width:640px;}
-  .credits .cr{display:flex;gap:20px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);}
-  .credits .cr img{width:46px;height:46px;border-radius:50%;object-fit:cover;flex:none;}
-  .credits .cr .ph{width:46px;height:46px;border-radius:50%;flex:none;background:var(--panel);border:1px solid var(--line);}
-  .credits .cr b{font-weight:560;font-size:.98rem;}
-  .credits .cr span{display:block;font-size:.8rem;color:var(--ink-faint);margin-top:2px;}
+  .credits{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:640px;}
+  @media(max-width:600px){ .credits{grid-template-columns:1fr;} }
+  .credits .credit{display:block;text-decoration:none;color:inherit;}
+  .credits .credit img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:2px;box-shadow:var(--shadow);display:block;}
+  .credits .credit span{display:block;margin-top:10px;font-weight:560;font-size:.92rem;color:var(--ink);}
+  .credits .credit:hover span{color:var(--accent);}
   .pitch-monologue{margin-top:64px;padding-top:56px;border-top:1px solid var(--line);max-width:1040px;}
   .pitch-monologue .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;}
   @media(max-width:820px){ .pitch-monologue .cols{grid-template-columns:1fr;} }
@@ -497,26 +497,22 @@
     <p>Atuo principalmente com ensaios fotográficos de pessoas em diferentes fases da vida, sempre buscando criar imagens que tenham significado e representem verdadeiramente quem está diante da minha câmera.</p>
     <p>Ao longo dessa trajetória, também desenvolvi projetos que utilizam a fotografia como instrumento de expressão, inclusão, valorização e reflexão, entre eles:</p>
     <div class="credits">
-      <div class="cr">
-        <img src="assets/credit-01.jpg" alt="">
-        <div><b>Raízes de Dandara</b></div>
-      </div>
-      <div class="cr">
-        <div class="ph"></div>
-        <div><b>Faces do Amor</b></div>
-      </div>
-      <div class="cr">
-        <img src="assets/credit-02.jpg" alt="">
-        <div><b>Leitura, um prazer em todas as idades</b></div>
-      </div>
-      <div class="cr">
-        <div class="ph"></div>
-        <div><b>Vivência — é preciso SENTIR para incluir</b></div>
-      </div>
-      <div class="cr">
-        <img src="assets/credit-03.jpg" alt="">
-        <div><b>Vejo flores em você</b></div>
-      </div>
+      <a class="credit" href="https://www.tinafon.com.br/post/34617-raizesdedandara" target="_blank" rel="noopener">
+        <img src="assets/project-dandara.jpg" alt="Raízes de Dandara">
+        <span>Raízes de Dandara</span>
+      </a>
+      <a class="credit" href="https://www.tinafon.com.br/post/30551-facesdoamor" target="_blank" rel="noopener">
+        <img src="assets/project-faces-do-amor.jpg" alt="Faces do Amor">
+        <span>Faces do Amor</span>
+      </a>
+      <a class="credit" href="https://www.tinafon.com.br/post/37561-exposicaolivros" target="_blank" rel="noopener">
+        <img src="assets/project-leitura.jpg" alt="Leitura, um prazer em todas as idades">
+        <span>Leitura, um prazer em todas as idades</span>
+      </a>
+      <a class="credit" href="https://www.tinafon.com.br/post/42335-vivenciasesctorres" target="_blank" rel="noopener">
+        <img src="assets/project-vivencia.jpg" alt="Vivência — é preciso SENTIR para incluir">
+        <span>Vivência — é preciso SENTIR para incluir</span>
+      </a>
     </div>
     <p>Esses projetos reforçam uma convicção que acompanha minha trajetória: a fotografia pode ir muito além do registro. Ela pode dar visibilidade, despertar novos olhares e ajudar a valorizar pessoas, histórias, talentos e lugares.</p>
   </div>
