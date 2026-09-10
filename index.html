@@ -328,6 +328,13 @@
     margin-top:44px;text-align:center;font-family:"Fraunces",serif;font-style:italic;font-weight:560;
     font-size:clamp(1.5rem,3.2vw,2.05rem);color:var(--highlight);
   }
+  @keyframes tagline-float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-9px);}
+  }
+  @media (prefers-reduced-motion: no-preference){
+    .pitch-monologue .tagline{animation:tagline-float 5.5s ease-in-out infinite;}
+  }
   .questions{list-style:none;margin:20px 0 0;padding:0;display:flex;flex-direction:column;gap:10px;}
   .questions li{
     font-family:"Fraunces",serif;font-style:italic;font-size:1.2rem;color:var(--accent);
